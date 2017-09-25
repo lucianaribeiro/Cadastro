@@ -22,12 +22,12 @@
   </head>
   <body>
     <main class="container">
-      <form id="formMed">
         <br>
         <div class="card border-success mb-3" style="max-width">
           <div class="card-header">Cadastro de Medicamentos</div>
           <div class="card-body text-success">
             <div class="form-group">
+              <form id="formulario">
               <div>
                 <label class="form-control-label" for="nome">Nome Comercial:</label>
                 <input type="text" class="form-control" id="nome" placeholder="Nome Comercial">
@@ -73,6 +73,7 @@
             </div>
           </div>
         </div>
+      </form>
         <div class="card border-success mb-3" style="max-width">
         <div class="card-header">Medicamentos Cadastrados</div>
         <div class="card-body text-success">
@@ -87,11 +88,10 @@
                 <th>Ações</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="medicamentos">
             </tbody>
           </table>
         </div>
-      </form>
     </main>
   </body>
 </html>
