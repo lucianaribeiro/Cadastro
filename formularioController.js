@@ -30,18 +30,19 @@ function formularioController(){
           categoria: this.inputCategoria.value
       };
     };
+
     this.carregaDados = function(medicamento){
-      var controlado = document.querySelector('input[id="controlado"][value="'+ medicamento.controlado +'"]');
+      var controlado = document.querySelector('input[name="controlado"][value="'+ medicamento.controlado +'"]');
       this.inputNome.value = medicamento.nome;
       this.inputRegistro.value = medicamento.registro;
       controlado.checked=true;
       this.inputCategoria.value = medicamento.categoria;
     };
-    this.carrega = function(row, medicamento){
+    this.carrega = function(row,medicamento){
       this.row = row;
-      this.carregaDados(medicamento);
+      formulario.carregaDados(medicamento);
       this.buttonCadastro.innerHTML = 'Salvar';
-      this.buttonLimpar.innerHTML = 'Cancelar';
+      this.buttonLimpar.innerHTML = "Cancelar";
     };
 
     this.buttonCadastro.onclick = function(){
@@ -54,6 +55,8 @@ function formularioController(){
     this.salvar = function(){
       var medicamento = this.recebeDados();
       tabela.atualiza(medicamento, this.row);
+      this.buttonCadastro.innerHTML = 'Cadastrar';
+      this.buttonLimpar.innerHTML = "Limpar";
     };
     this.limpar = function(){
       this.formMed.reset();

@@ -67,7 +67,7 @@ function tabelaController(){
     btn.innerHTML = 'Excluir';
     btn.onclick = function(){
       row.parentElement.removeChild(row);
-    };
+    }
     return btn;
-  };
+    };
 }
