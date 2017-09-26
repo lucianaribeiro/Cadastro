@@ -1,6 +1,6 @@
 function formularioController(){
 
-  this.formMed = document.getElementById('formMed');
+  this.formMed = document.getElementById('formulario');
   this.inputNome = document.getElementById('nome');
   this.inputRegistro = document.getElementById('numeroRegistro');
   this.inputControlado = document.getElementById('controlado');
@@ -18,5 +18,19 @@ function formularioController(){
       controlado: controlado ? controlado.value : '',
       categoria: this.inputCategoria.value
     };
+  };
+
+  this.btnCadastrar.onclick = function(){
+    formulario.salvar();
+  };
+  this.btnLimpar.onclick = function(){
+    formulario.limpar();
+  };
+
+  this.salvar = function(){
+
+  };
+  this.limpar = function(){
+
   };
 }
